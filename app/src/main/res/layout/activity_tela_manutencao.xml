@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FA"
+    tools:context=".telaManutencao">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="#1769AA"
+                android:gravity="center"
+                android:text="Manutenção de Usuário"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="Dados atuais"
+                android:textColor="#1769AA"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txvId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#526174"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txvNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#263238"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txvCpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#263238"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txvTelefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#263238"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="Alterar informações"
+                android:textColor="#1769AA"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Preencha somente os campos que deseja alterar."
+                android:textColor="#697586"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edtNome"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#1769AA"
+                android:hint="Novo nome"
+                android:inputType="textCapWords"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#263238"
+                android:textColorHint="#7A8493"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtCpf"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#1769AA"
+                android:hint="Novo CPF"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#263238"
+                android:textColorHint="#7A8493"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="#1769AA"
+                android:hint="Novo telefone"
+                android:inputType="phone"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#263238"
+                android:textColorHint="#7A8493"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#1769AA"
+                android:onClick="alterar"
+                android:text="Salvar alterações"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnExcluir"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#D9534F"
+                android:onClick="excluir"
+                android:text="Excluir usuário"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnVoltar"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:backgroundTint="#E2E8F0"
+                android:onClick="voltar"
+                android:text="Voltar"
+                android:textColor="#263238"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
